@@ -1,9 +1,13 @@
+using API_pdf_to_text.Repositories;
+using API_pdf_to_text.Repositories.Interfaces;
+
 var builder = WebApplication.CreateBuilder(args);
 var nomeCors = "_PoliticaCors";
-// Add services to the container.
+
+builder.Services.AddTransient<IPDFService, PDFService>();
+
 
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
@@ -22,7 +26,7 @@ builder.Services.AddCors(options =>
 });
 var app = builder.Build();
 app.UseCors(nomeCors);
-// Configure the HTTP request pipeline.
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
