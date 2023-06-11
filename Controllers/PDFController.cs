@@ -15,9 +15,13 @@ public class PDFController : ControllerBase
     }
 
     [HttpPost]
-    public IActionResult ConvertPDF(IFormFile file)
+    public IActionResult ConvertPDF(IFormFile doc)
     {
-        string textInside = _pdfService.ExtractTextFromPDF(file);
-        return Ok(textInside);
+        if (doc.FileName.EndsWith(".pdf"))
+        {
+            string textInside = _pdfService.ExtractTextFromPDF(doc);
+            return Ok(textInside);
+        }
+        return BadRequest("Arquivo não é um PDF");
     }
 }
