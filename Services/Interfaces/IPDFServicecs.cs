@@ -1,4 +1,4 @@
-﻿namespace API_pdf_to_text.Repositories.Interfaces;
+﻿namespace API_pdf_to_text.Services.Interfaces;
 
 public interface IPDFService
 {

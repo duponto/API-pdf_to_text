@@ -1,11 +1,11 @@
-﻿using API_pdf_to_text.Repositories.Interfaces;
+﻿using API_pdf_to_text.Services.Interfaces;
 using iText.Kernel.Pdf.Canvas.Parser.Listener;
 using iText.Kernel.Pdf.Canvas.Parser;
 using iText.Kernel.Pdf;
 using System.Text;
 using API_pdf_to_text.itext;
 
-namespace API_pdf_to_text.Repositories;
+namespace API_pdf_to_text.Services;
 
 public class PDFService : IPDFService
 {

@@ -1,5 +1,5 @@
-using API_pdf_to_text.Repositories;
-using API_pdf_to_text.Repositories.Interfaces;
+using API_pdf_to_text.Services;
+using API_pdf_to_text.Services.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 var nomeCors = "_PoliticaCors";
