@@ -6,7 +6,6 @@ var nomeCors = "_PoliticaCors";
 
 builder.Services.AddTransient<IPDFService, PDFService>();
 
-
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
